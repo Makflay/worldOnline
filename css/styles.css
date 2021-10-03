@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+body {
+    font-family: 'Lora', serif;
+    font-weight: normal;
+    cursor: default;
+}
+.conteiner {
+    display: inline-block;
+    padding: 2rem 2rem;
+}
+/* Table */
+.table {
+    width: 100%;
+    margin:0;
+    padding:0;
+    border-collapse: collapse;
+    border: 1px solid #eee;
+}
+.table tr {
+    padding: 5px;
+}
+.table tr:nth-child(odd) {
+    background-color: #eee;
+}
+.table th {
+    text-align: center;
+    color: #fff;
+    background-color: #706d97;
+    padding: 10px;
+}
+.table th span {
+    cursor: pointer;
+}
+.table td {
+    text-align: center;
+    color: #696969;
+    border-bottom: 1px solid #eee;
+}
+.table td:nth-child(6),
+.table td:nth-child(7) {
+    cursor: pointer;
+}
+.table td:nth-child(6):hover,
+.table td:nth-child(7):hover {
+    color: green;
+}
+.table td button {
+    justify-content: center;
+    align-items: center;
+    border: none;
+    right: 0;
+    top: 0;
+    background: none;
+    cursor: pointer;
+    transition: .3s;
+    outline: none;
+}
+.table td button:hover {
+    transition: .3s;
+    transform: rotate(180deg);
+    color: red;
+}
+
+@media screen and (max-width: 600px) {
+    .table {
+        border: 0;
+    }
+
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    .table td {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        border-bottom: 1px dotted #ccc;
+        border-right: 1px solid transparent;
+    }
+
+    .table td:last-child {
+        border-bottom: 0;
+    }
+
+    .table td:before {
+        content: attr(data-label);
+        float: left;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+}
+
+/* Modal */
+.modal {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+    top: -1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-y: scroll;
+    padding: 60px 15px;
+}
+.modal_active {
+    position: fixed;
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+    transition: .3s;
+}
+.modal-content {
+    width: 100%;
+    max-width: 500px;
+    padding: 50px;
+    background: #f9f9f9;
+    border-radius: 3px;
+    position: relative;
+    box-shadow: 0 5px 15px black;
+}
+.close-button-modal {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: none;
+    cursor: pointer;
+    transition: .3s;
+    outline: none;
+}
+.close-button-modal:hover {
+    transition: .3s;
+    transform: rotate(180deg);
+    color: red;
+}
+/* Modal Information*/
+.modal-title {
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0 0 15px;
+}
+.modal-description {
+    font-size: 1.125rem;
+}
+
+/* Modal Add User */
+.modal-content p {
+    font-weight: bold;
+}
+.form-group label{
+    display: block;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    color: black;
+    padding: 15x 0 10px;
+    outline: none;
+    font-family: inherit;
+}
+.row {
+    display: flex;
+    margin-bottom: 20px;
+}
+.row > .form-group {
+    width: 50%;
+}
+.row > .form-group:first-child {
+    margin-right: 20px;
+}
+.btn {
+    display: block;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    background: black;
+    padding: 15px 20px;
+    color: white;
+    border: none;
+    font-family: inherit;
+    font-size: medium;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: 0.9;
+}

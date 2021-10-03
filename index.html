@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Test 1 World online R&D Center</title>
+        <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+    </head>
+    <body>
+        <div class='table-wrap'>
+            <table class='table'>
+                <caption><h1>Test 1 World online R&D Center</h1></caption>
+                <thead>
+                    <tr id='sort'>
+                        <th scope='col'><span>ID</span></th>
+                        <th scope='col'><span>Name</span></th>
+                        <th scope='col'><span>Username</span></th>
+                        <th scope='col'><span>Email</span></th>
+                        <th scope='col'><span>Website</span></th>
+                        <th scope='col'><span>Address</span></th>
+                        <th scope='col'><span>Company</span></th>
+                        <th scope='col'><span>Phone number</span></th>
+                        <th scope='col'>&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody id='usersBody'></tbody>
+            </table>
+            <button id='add-user' class='btn'>Add new user</button>
+    </div>
+
+    <div class='modal' id='openModal'>
+        <div class='modal-content'>
+            <button class='close-button-modal' id='close-modal-box'>&#9747;</button>
+            <div class='modal-header'>
+                <h3 class='modal-title'></h3>
+            </div>
+            <div class='modal-description'></div>
+        </div>
+    </div>
+
+    <div class='modal' id='open-form'>
+        <div class='modal-content'>
+            <button class='close-button-modal' id='close-form'>&#9747;</button>
+            <div class='modal-header'>
+                <h3 class='modal-title'>add new user:</h3>
+            </div>
+            <form id='save-user'>
+                <div class='row'>
+                    <div class='form-group'>
+                        <label for="name">Name:</label>
+                        <input type="text" placeholder='Type name' id="name" name="name">
+                    </div>
+                    <div class='form-group'>
+                        <label for="username">Username:</label>
+                        <input type="text" placeholder='Type username' id="userName" name="userName">
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='form-group'>
+                        <label for="email">Email:</label>
+                        <input type="text" placeholder='Type email' id="email" name="email">
+                    </div>
+                    <div class='form-group'>
+                        <label for="website">Website:</label>
+                        <input type="text" placeholder='Type website' id="website" name="website">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <label for="phoneNumber">Phone number:</label>
+                    <input type="text" placeholder='Type phone number' id="phoneNumber" name="phoneNumber">
+                </div>
+                <p>Address:</p>
+                <div class='row'>
+                    <div class='form-group'>
+                        <label for="city">City:</label>
+                        <input type="text" placeholder='Type city' id="city" name="city">
+                    </div>
+                    <div class='form-group'>
+                        <label for="street">Street:</label>
+                        <input type="text" placeholder='Type street' id="street" name="street">
+                    </div>
+                </div>
+                <div class='row'>
+                    <div class='form-group'>
+                        <label for="suite">Suite:</label>
+                        <input type="text" placeholder='Type suite' id="suite" name="suite">
+                    </div>
+                    <div class='form-group'>
+                        <label for="zipcode">Zipcode:</label>
+                        <input type="text" placeholder='Type zipcode' id="zipcode" name="zipcode">
+                    </div>
+                </div>
+                <p>Address geo:</p>
+                <div class='row'>
+                    <div class='form-group'>
+                        <label for="lat">Latitude:</label>
+                        <input type="text" placeholder='Type latitude' id="lat" name="lat">
+                    </div>
+                    <div class='form-group'>
+                        <label for="lng">Longitude:</label>
+                        <input type="text" placeholder='Type longitude' id="lng" name="lng">
+                    </div>
+                </div>
+                <div class='form-group'>
+                    <p>Company:</p>
+                    <label for="bs">Bs:</label>
+                    <input type="text" placeholder='Type bs' id="bs" name="bs">
+                </div>
+                <div class='form-group'>
+                    <label for="catchPhrase">Catch Phrase:</label>
+                    <textarea type="text" placeholder='Type catch phrase' id="catchPhrase" name="catchPhrase"></textarea>
+                </div>
+                <div class='form-group'>
+                    <label for="companyName">Company name:</label>
+                    <textarea type="text" placeholder='Type company name' id="companyName" name="companyName"></textarea>
+                </div>
+                <button type='submit' class='btn'>Save new user</button>
+            </form>
+        </div>
+    </div>
+    <script src='./js/main_bundle.js'></script>
+    </body>
+</html>
