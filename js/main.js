@@ -18,7 +18,7 @@ async function main() {
     await getUsers(users);
     drawUsers(users);
 }
-main()
+main();
 
 document.addEventListener('DOMContentLoaded', () => {
 //Sorting
